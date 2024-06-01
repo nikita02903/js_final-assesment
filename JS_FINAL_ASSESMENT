@@ -1,0 +1,37 @@
+const arr1=[];
+
+let mintNFT =  (name,eyecolor,shirttype,bling) => {
+ const NFTs={
+    "name":name,
+    "eyecolor":eyecolor,
+    "shirttype":shirttype,
+    "bling":bling
+ }
+ arr1.unshift(NFTs);
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+  for (let i = 0; i < arr1.length; i++) {
+    const element = arr1[i];
+    console.log("Name: "+ element.name);
+    console.log("eyeColor: "+ element.eyecolor)
+    console.log("bling: " +element.bling)
+    console.log("shirtType: "+ element.shirttype)
+    console.log("\n")
+  }
+}
+
+// print the total number of NFTs we have minted to the console
+let getTotalSupply = ()=> {
+   console.log("Total NFTs Minted are : "+ arr1.length)
+}
+
+// call your functions below this line
+mintNFT('Annie','Grey','Blazzer','Gold ring');
+mintNFT('Nikita','Blue','t-shirt','Silver earing');
+mintNFT('Kinjal','Blue','Shirt','silver ring');
+listNFTs();
+getTotalSupply();
+
